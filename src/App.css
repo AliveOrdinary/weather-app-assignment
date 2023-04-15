@@ -1,0 +1,244 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #48b0fd;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  width: 100%;
+  min-width: clamp(300px, 20vw, 600px);
+  height: 100%;
+  min-height: clamp(300px, 25vh, 400px);
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  /* padding: 1rem; */
+}
+
+.app-header {
+  width: 100%;
+  height: 10%;
+  color: #48b0fd;
+  border-bottom: 2px solid #e5e5e5;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+}
+
+.form-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.form-wrapper form input {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #e5e5e5;
+  border-radius: 5px;
+  padding: 1rem 1.8rem;
+  font-size: 1.2rem;
+  outline: none;
+}
+::placeholder {
+  color: #cdcdcd;
+  text-align: center;
+}
+
+.form-wrapper:hover::after {
+  content: "Click Enter to Search";
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.search-result {
+  /* position: relative; */
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem;
+  background-color: #e5e5e5;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.or-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  width: clamp(100px, 20vw, 150px);
+  height: 2px;
+  background-color: #e5e5e5;
+  margin: 0 0.5rem;
+}
+
+.or {
+  font-size: 1.5rem;
+  color: #cdcdcd;
+}
+
+.button-container {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.button-container button {
+  width: 100%;
+  height: 100%;
+  background-color: #48b0fd;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.result-container {
+  width: 100%;
+  min-width: clamp(300px, 35vw, 600px);
+  height: 100%;
+  min-height: clamp(300px, 25vh, 600px);
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  /* padding: 1rem; */
+}
+
+.result-info {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 0 2rem; */
+}
+
+.result-info img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.result-info h1 {
+  font-size: 4rem;
+  color: #000000;
+  font-weight: 500;
+  margin: 0;
+}
+
+.result-info h3 {
+  font-size: 1.5rem;
+  color: #000000;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 15px;
+}
+
+.location h4 {
+  font-size: 1.2rem;
+  color: #000000;
+  font-weight: 400;
+}
+
+.footer {
+  width: 100%;
+  height: 10%;
+  border-top: 2px solid #e5e5e5;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10px;
+  /* margin-bottom: 10px; */
+}
+
+.footer div {
+  margin-top: 5px;
+}
+
+.footer span {
+  height: 80px;
+  width: 2px;
+  background-color: #cdcdcd;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.error {
+  position: absolute;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: rgb(255, 85, 85);
+}
+
+.loading {
+  position: absolute;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: rgb(0, 0, 0);
+}

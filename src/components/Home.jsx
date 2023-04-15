@@ -9,8 +9,8 @@ const Home = () => {
   const { response, isLoading, error, reFetch } = useFetch({
     query: query,
   });
-  console.log(query);
-  console.log(response);
+  //   console.log(query);
+  //   console.log(response);
 
   const handleLocation = () => {
     // setQuery("");
@@ -34,14 +34,24 @@ const Home = () => {
       );
     } else {
       // Browser doesn't support Geolocation
+      alert("Browser doesn't support Geolocation");
     }
   };
   return (
-    <div>
-      <h2>Wether App</h2>
+    <div className="app-container">
+      <div className="app-header">
+        <h2>Weather App</h2>
+      </div>
       <Search />
 
-      <button onClick={handleLocation}>Get Device Location</button>
+      <div className="or-container">
+        <div className="line"></div>
+        <div className="or">or</div>
+        <div className="line"></div>
+      </div>
+      <div className="button-container">
+        <button onClick={handleLocation}>Get Device Location</button>
+      </div>
     </div>
   );
 };

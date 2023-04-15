@@ -5,7 +5,7 @@ const useFetch = (query) => {
   const [response, setResponse] = useState(null);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  console.log(query);
+  // console.log(query);
 
   const options = {
     method: "GET",
